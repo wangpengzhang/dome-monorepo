@@ -1,0 +1,54 @@
+# .gitignore - Git忽略文件配置
+# 该文件定义了哪些文件和目录不应该被Git版本控制系统跟踪
+
+# Node.js 相关文件
+# 依赖包目录 - 包含所有第三方库，应从版本控制中排除
+node_modules/
+# 构建输出目录 - 包含编译后的代码，可通过构建重新生成
+dist/
+build/
+# 环境变量文件 - 可能包含敏感信息（如API密钥、数据库凭证等）
+.env
+.env.*
+# 日志文件 - 包含运行时信息，不应该提交到版本控制
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE相关文件
+# VSCode配置目录 - 包含用户特定的编辑器设置
+.vscode/
+# IntelliJ IDEA配置目录 - 包含用户特定的编辑器设置
+.idea/
+# Visual Studio解决方案文件 - 包含IDE特定配置
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+# Vim交换文件 - 编辑过程中的临时文件
+*.sw?
+
+# 操作系统相关文件
+# macOS系统文件 - 存储文件夹属性和缩略图
+.DS_Store
+# Windows系统文件 - 存储文件夹缩略图
+Thumbs.db
+
+# TypeScript相关
+# TypeScript构建信息文件 - 包含编译缓存信息
+*.tsbuildinfo
+
+# 其他杂项文件
+# 测试覆盖率报告 - 由测试工具生成的报告
+coverage/
+# 本地文件 - 本地开发过程中使用的临时文件
+*.local
+# 缓存文件 - 各种工具生成的缓存数据
+*.cache
+# 临时文件 - 系统或应用程序生成的临时文件
+*.tmp
+
+# Git目录 - 虽然Git通常会自动忽略，但为了明确性也添加在此
+.git/

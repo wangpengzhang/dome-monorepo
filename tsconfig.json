@@ -1,0 +1,66 @@
+{
+    "compilerOptions": {
+        // 基础路径，用于解析非相对模块名
+        "baseUrl": ".",
+
+        // 指定ECMAScript目标版本，esnext表示使用最新的ECMAScript特性
+        "target": "esnext",
+
+        // 指定生成哪个模块系统代码，esnext表示使用最新的模块系统
+        "module": "esnext",
+
+        // 指定要包含的类型声明文件，空数组表示不包含任何外部类型声明
+        "types": [],
+
+        // 指定要包含的库文件，esnext表示使用最新的ES标准库
+        "lib": ["esnext"],
+
+        // 生成相应的.map文件，便于调试
+        "sourceMap": true,
+
+        // 生成.d.ts声明文件，用于提供类型信息给其他模块
+        "declaration": true,
+
+        // 为声明文件生成源映射，便于调试类型声明
+        "declarationMap": true,
+
+        // 为数组索引访问添加严格的类型检查，防止未检查的索引访问
+        "noUncheckedIndexedAccess": true,
+
+        // 是否启用可选属性的精确类型检查
+        "exactOptionalPropertyTypes": false,
+
+        // 启用所有严格类型检查选项
+        "strict": true,
+
+        // 是否保持模块语法的字面值，false表示允许一些非标准但常用的模块语法
+        "verbatimModuleSyntax": false,
+
+        // 指定模块解析策略，bundler表示使用与现代打包工具兼容的解析策略
+        "moduleResolution": "bundler",
+
+        // 是否将每个文件作为单独的模块进行编译
+        "isolatedModules": false,
+
+        // 是否检查没有副作用的导入
+        "noUncheckedSideEffectImports": false,
+
+        // 模块检测策略，force表示强制将所有文件视为模块
+        "moduleDetection": "force",
+
+        // 跳过声明文件的类型检查，提高编译速度
+        "skipLibCheck": true,
+
+        // 启用对ES模块的互操作性支持，允许使用CommonJS模块
+        "esModuleInterop": true,
+
+        // 强制在文件名中保持一致的大小写，防止跨平台问题
+        "forceConsistentCasingInFileNames": true
+    },
+    "exclude": [
+        // 排除node_modules目录
+        "node_modules",
+        // 排除编译输出目录
+        "dist"
+    ]
+}
