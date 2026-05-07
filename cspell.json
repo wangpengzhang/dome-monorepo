@@ -1,34 +1,43 @@
 {
+    // 导入外部字典扩展（此处导入了 lorem-ipsum 示例字典）
     "import": ["@cspell/dict-lorem-ipsum/cspell-ext.json"],
+
+    // 是否启用大小写敏感检查（false = 不区分大小写）
     "caseSensitive": false,
+
+    // 指定使用的字典列表（引用下方 dictionaryDefinitions 中定义的字典）
     "dictionaries": ["custom-dictionary"],
+
+    // 自定义字典定义
     "dictionaryDefinitions": [
         {
-            "name": "custom-dictionary",
-            "path": "./.cspell/custom-dictionary.txt",
-            "addWords": true
+            "name": "custom-dictionary",       // 字典名称（用于在 dictionaries 中引用）
+            "path": "./.cspell/custom-dictionary.txt",  // 字典文件路径
+            "addWords": true                   // 是否允许自动添加新词到字典
         }
     ],
+
+    // 忽略检查的文件/目录路径模式
     "ignorePaths": [
-        "**/node_modules/**",
-        "**/dist/**",
-        "**/build/**",
-        "**/lib/**",
-        "**/docs/**",
-        "**/vendor/**",
-        "**/public/**",
-        "**/static/**",
-        "**/out/**",
-        "**/tmp/**",
-        "**/*.d.ts",
-        "**/package.json",
-        "**/*.md",
-        "**/stats.html",
-        "eslint.config.mjs",
-        ".gitignore",
-        ".prettierignore",
-        "cspell.json",
-        "commitlint.config.js",
-        ".cspell"
+        "**/node_modules/**",  // Node.js 依赖目录
+        "**/dist/**",          // 构建产物目录
+        "**/build/**",         // 构建目录
+        "**/lib/**",           // 库文件目录
+        "**/docs/**",          // 文档目录
+        "**/vendor/**",        // 第三方库目录
+        "**/public/**",        // 静态资源目录
+        "**/static/**",        // 静态文件目录
+        "**/out/**",           // 输出目录
+        "**/tmp/**",           // 临时文件目录
+        "**/*.d.ts",           // TypeScript 类型声明文件
+        "**/package.json",     // 依赖配置文件
+        "**/*.md",             // Markdown 文档文件
+        "**/stats.html",       // 统计报告文件
+        "eslint.config.mjs",   // ESLint 配置文件
+        ".gitignore",          // Git 忽略配置
+        ".prettierignore",     // Prettier 忽略配置
+        "cspell.json",         // CSpell 自身配置文件
+        "commitlint.config.js",// Commitlint 配置文件
+        ".cspell"              // CSpell 字典目录
     ]
 }
